@@ -1,5 +1,4 @@
-[is='flynt-block-content-home'] {
-  margin-left: 100px;
+[is='flynt-block-now-showing'] {
   padding: $container-padding-mobile;
 
   @media (max-width: $breakpoint-tablet-horizontal) {
@@ -21,34 +20,34 @@
     .grid {
       @include reset-list;
       display: flex;
-      flex-flow: column wrap;
-      max-height: 800px;
-      overflow: hidden;
+      flex-flow: row wrap;
+      gap: 10px;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        max-height: 100%;
-        padding: 0;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // max-height: 100%;
+        // padding: 0;
       }
 
       @media (max-width: $breakpoint-mobile-horizontal) {
-        display: flex;
-        flex-flow: column wrap;
-        max-height: 100%;
-        padding: 0;
+        // display: flex;
+        // flex-flow: column wrap;
+        // max-height: 100%;
+        // padding: 0;
       }
     }
   }
 
   .grid-item {
-    margin: 0 0 6px 2px;
+    flex-grow: 4;
+    margin: 0;
     overflow: hidden;
     position: relative;
-    width: 33%;
+    // max-width: 33.33%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      width: 50%;
+      // width: 50%;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
@@ -112,7 +111,7 @@
           transition: all 0.2s linear;
           width: 33.33%;
 
-          &:nth-child(2) {
+          &:first-child {
             border-right: 2px solid $black;
           }
 
@@ -136,32 +135,8 @@
 
   .figure-image {
     border: 2px solid $black;
-    height: 100%;
+    height: 300px;
     object-fit: cover;
     width: 100%;
   }
-
-  @for $i from 1 through 5 { 
-    .grid-item:nth-child(#{$i}) .figure-image {
-      $h: (random(400) + 100) + px;
-      height: $h;
-      min-height: 300px;
-    }
-  }
-
-  // .grid-item:nth-child(1) .figure-image {
-  //   height: 300px;
-  // }
-  // .grid-item:nth-child(2) .figure-image {
-  //   height: 300px;
-  // }
-  // .grid-item:nth-child(3) .figure-image {
-  //   height: 200px;
-  // }
-  // .grid-item:nth-child(4) .figure-image {
-  //   height: 300px;
-  // }
-  // .grid-item:nth-child(5) .figure-image {
-  //   height: 200px;
-  // }
 }

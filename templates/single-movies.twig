@@ -2,9 +2,9 @@
 
 {% block content %}
   <article class="post">
-    <header class="post-header">
+    {# <header class="post-header">
       {{ renderComponent('BlockMovieHeader', { post: post }) }}
-    </header>
+    </header> #}
     <section class="post-main">
       {# {% for component in post.meta('postComponents') %}
         {{ renderComponent(component) }}
@@ -13,9 +13,9 @@
         {{ post.content|e('wp_kses_post') }}
       {% endif %}
     </section>
-    {# <footer class="post-meta">
-      {{ renderComponent('BlockPostFooter', { post: post }) }}
-    </footer> #}
+    <footer class="post-footer">
+      {{ renderComponent('BlockMovieFooter', { post: post }) }}
+    </footer>
     {# <section class="post-related">
       {{ renderComponent('GridPostsLatest', {'preContentHtml': '<h2>' ~ __('Related Posts') ~ '</h2>','taxonomies': post.categories(), 'options': {'theme': 'themeLight', 'columns': 3}}) }}
     </section> #}

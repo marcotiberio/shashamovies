@@ -17,8 +17,12 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'layouts' => [
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockContentHome\getACFLayout(),
+                    Components\HeroImageCta\getACFLayout(),
+                    Components\HeroImageText\getACFLayout(),
                     Components\BlockImage\getACFLayout(),
                     Components\BlockImageText\getACFLayout(),
+                    Components\BlockNowShowing\getACFLayout(),
+                    Components\BlockNowShowingFeatured\getACFLayout(),
                     Components\BlockShortcode\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),

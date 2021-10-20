@@ -1,4 +1,4 @@
-[is='flynt-block-content-home'] {
+[is='flynt-block-now-showing-featured'] {
   margin-left: 100px;
   padding: $container-padding-mobile;
 
@@ -42,7 +42,7 @@
   }
 
   .grid-item {
-    margin: 0 0 6px 2px;
+    margin: 0 0 8px 8px;
     overflow: hidden;
     position: relative;
     width: 33%;
@@ -83,43 +83,15 @@
         width: 100%;
       }
 
-      .bottom {
+      .subtitle {
+        background-color: rgba($color: $pink, $alpha: 0.8);
         border: 2px solid $black;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        font-weight: 900;
+        margin-bottom: 0;
+        padding: 5px 0;
+        text-align: center;
+        transition: all 0.2s linear;
         width: 100%;
-
-        .synopsis {
-          background-color: $white;
-          border-bottom: 2px solid $black;
-          min-height: fit-content;
-          padding: 5px;
-          width: 100%;
-        }
-
-        .subtitle {
-          align-items: center;
-          background-color: rgba($color: $pink, $alpha: 0.8);
-          display: flex;
-          flex-flow: row wrap;
-          font-weight: 900;
-          gap: 5px;
-          justify-content: center;
-          margin-bottom: 0;
-          padding: 5px 0;
-          text-align: center;
-          transition: all 0.2s linear;
-          width: 33.33%;
-
-          &:nth-child(2) {
-            border-right: 2px solid $black;
-          }
-
-          &:last-child {
-            border-left: 2px solid $black;
-          }
-        }
       }
     }
   }

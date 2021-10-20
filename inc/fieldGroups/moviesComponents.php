@@ -62,6 +62,31 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ],
             ],
             [
+                'label' => __('Language', 'flynt'),
+                'name' => 'languageTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Language Movie', 'flynt'),
+                'name' => 'languageMovie',
+                'type' => 'text',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '50',
+                ],
+            ],
+            [
+                'label' => __('Language Subtitles', 'flynt'),
+                'name' => 'languageSubtitles',
+                'type' => 'text',
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '50',
+                ],
+            ],
+            [
                 'label' => __('Synopsis', 'flynt'),
                 'name' => 'synopsisTab',
                 'type' => 'tab',

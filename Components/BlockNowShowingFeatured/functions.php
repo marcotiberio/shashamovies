@@ -1,6 +1,6 @@
 <?php
 
-namespace Flynt\Components\BlockContentHome;
+namespace Flynt\Components\BlockNowShowingFeatured;
 
 use Flynt\FieldVariables;
 use Flynt\Utils\Options;
@@ -8,7 +8,7 @@ use Timber\Timber;
 
 const POST_TYPE = 'episode';
 
-add_filter('Flynt/addComponentData?name=BlockContentHome', function ($data) {
+add_filter('Flynt/addComponentData?name=BlockNowShowingFeatured', function ($data) {
 
     $postType = POST_TYPE;
 
@@ -20,8 +20,8 @@ add_filter('Flynt/addComponentData?name=BlockContentHome', function ($data) {
 function getACFLayout()
 {
     return [
-        'name' => 'BlockContentHome',
-        'label' => 'Block: Content Home',
+        'name' => 'BlockNowShowingFeatured',
+        'label' => 'Block: Featured Movie',
         'sub_fields' => [
             [
                 'label' => __('Title', 'flynt'),
