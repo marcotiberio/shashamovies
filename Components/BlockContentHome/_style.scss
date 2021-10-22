@@ -26,10 +26,12 @@
       overflow: hidden;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
+        column-gap: $container-padding-mobile;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         max-height: 100%;
         padding: 0;
+        row-gap: $container-padding-mobile;
       }
 
       @media (max-width: $breakpoint-mobile-horizontal) {
@@ -48,7 +50,8 @@
     width: 33%;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
-      width: 50%;
+      margin: 0;
+      width: 100%;
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
