@@ -2,23 +2,29 @@
   font-size: 0.8rem;
 
   .container {
-    padding-bottom: $component-spacing-mobile;
-    padding-top: $component-spacing-mobile;
-    text-align: center;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: $container-padding-mobile;
 
-    @media (min-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-tablet-horizontal) {
       display: flex;
-      flex-direction: row-reverse;
+      flex-direction: column;
       justify-content: space-between;
     }
   }
 
   .content {
-    @include reset-content-margins;
-    margin: 10px 0 0;
+    margin: 0;
 
-    @media (min-width: $breakpoint-tablet) {
+    p {
       margin: 0;
+    }
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      @include reset-content-margins;
+      margin-top: 10px;
+      text-align: left;
     }
   }
 

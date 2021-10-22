@@ -5,9 +5,29 @@
   margin: 0;
   padding: 0;
 
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
+  }
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+  }
+
   &-item {
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      text-align: left;
+    }
+    
     &:not(:first-child) {
       margin-left: 2rem;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        margin-left: 0;
+      }
     }
   }
 

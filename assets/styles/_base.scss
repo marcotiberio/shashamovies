@@ -720,6 +720,28 @@ select {
   }
 }
 
+/* Custom Styling for Homepage */
+
+.home {
+  .flyntComponent--flynt-navigation-footer {
+    margin-left: 100px;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      margin-left: 0;
+
+      .menu {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+
+        &-item {
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
 /* Skip link behaviour */
 
 .skipLink {
