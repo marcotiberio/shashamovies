@@ -3,7 +3,7 @@
   border-top: 2px solid $black;
   bottom: 0;
   display: none;
-  left: 100px;
+  left: 0;
   position: fixed;
   right: 0;
   z-index: 999;
@@ -23,44 +23,38 @@
   }
 
   &.layoutBottom {
-    @media (min-width: $breakpoint-tablet-horizontal) {
-      .container {
-        align-items: center;
-        background-color: $white;
-        display: flex;
-        justify-content: space-between;
-        padding: $container-padding-mobile;
-      }
+    .container {
+      align-items: center;
+      background-color: $white;
+      display: flex;
+      justify-content: space-between;
+      padding: $container-padding-mobile;
+    }
 
-      .content {
-        padding-bottom: 0;
-        padding-right: $container-padding-mobile;
-      }
+    .content {
+      padding-bottom: 0;
+      padding-right: $container-padding-mobile;
+    }
 
-      .button {
-        background-color: $black;
-        border: 2px solid $black;
+    .button {
+      background-color: $black;
+      border: 2px solid $black;
 
-        &:hover {
-          background-color: transparent;
-          color: $black;
-        }
+      &:hover {
+        background-color: transparent;
+        color: $black;
       }
     }
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       .container {
+        align-items: flex-start;
+        flex-flow: column;
         padding: $container-padding-mobile;
       }
 
       .button {
-        background-color: $black;
-        border: 2px solid $black;
-
-        &:hover {
-          background-color: transparent;
-          color: $black;
-        }
+        margin-top: $container-padding-mobile;
       }
     }
   }
