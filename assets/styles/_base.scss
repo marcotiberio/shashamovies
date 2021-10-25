@@ -723,6 +723,10 @@ select {
 /* Custom Styling for Homepage */
 
 .home {
+  .mc-container {
+    margin-left: 100px;
+  }
+  
   .flyntComponent--flynt-navigation-footer {
     margin-left: 100px;
 
@@ -746,6 +750,60 @@ select {
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       margin-left: 0;
+    }
+  }
+}
+
+/* Mailchimp */
+
+.mc-container {
+  align-items: center;
+  column-gap: $container-padding-mobile / 2;
+  display: grid;
+  flex-flow: row wrap;
+  grid-auto-rows: auto;
+  grid-template-columns: 3fr 2fr 0.5fr;
+  justify-content: space-between;
+  padding: $container-padding-desktop $container-padding-mobile;
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    grid-template-columns: 1fr;
+  }
+
+  .mc-field-group__email {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      justify-content: flex-end;
+      width: 100%;
+    }
+
+    input {
+      border-left: 0;
+      border-right: 0;
+      border-top: 0;
+      padding: $container-padding-mobile / 2 0;
+      width: 70%;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        width: 100%;
+      }
+    }
+  }
+
+  .button {
+    background-color: transparent;
+    border: 1px solid $black;
+    color: $black;
+    max-height: 50px;
+
+    &:hover {
+      background-color: $black;
+      border: 1px solid $black;
+      color: $white;
     }
   }
 }
