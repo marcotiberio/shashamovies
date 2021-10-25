@@ -1,0 +1,39 @@
+[is='flynt-block-signup'] {
+  .container {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+
+    @media (max-width: $breakpoint-tablet-horizontal) {
+      align-items: flex-start;
+      flex-flow: column wrap;
+    }
+
+    .content {
+      width: 40%;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        width: 100%;
+      }
+    }
+
+    .button {
+      background-color: $black;
+      border: 1px solid $black;
+      color: $white;
+      width: 40%;
+
+      @media (max-width: $breakpoint-tablet-horizontal) {
+        max-width: 375px;
+        width: auto;
+      }
+
+      &:hover {
+        background-color: transparent;
+        border: 1px solid $black;
+        color: $black;
+      }
+    }
+  }
+}
