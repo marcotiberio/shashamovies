@@ -14,13 +14,28 @@
   }
 
   .button {
+    background-color: $black;
+    border: 1px solid $black;
+    color: $white;
     white-space: nowrap;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $black;
+      color: $black;
+
+      .arrow {
+        color: $black;
+      }
+    }
   }
 
   .arrow {
     color: $color-background;
     height: 18px;
     width: 16px;
+
+
   }
 
   &-next {

@@ -51,7 +51,8 @@ function getACFLayout()
                 'name' => 'episode',
                 'type' => 'relationship',
                 'post_type' => [
-                    'movies'
+                    'movies',
+                    'post'
                 ],
                 'allow_null' => 0,
                 'multiple' => 0,

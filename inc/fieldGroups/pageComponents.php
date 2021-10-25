@@ -24,6 +24,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                     Components\BlockNowShowing\getACFLayout(),
                     Components\BlockNowShowingFeatured\getACFLayout(),
                     Components\BlockShortcode\getACFLayout(),
+                    Components\BlockSignup\getACFLayout(),
                     Components\BlockVideoOembed\getACFLayout(),
                     Components\BlockWysiwyg\getACFLayout(),
                     Components\BlockWysiwygTwoCol\getACFLayout(),
