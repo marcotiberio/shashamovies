@@ -109,6 +109,18 @@
     padding-top: 1.5rem;
     text-align: center;
 
+    a {
+      color: $black;
+
+      &::after {
+        color: $black;
+      }
+
+      &::before {
+        background-color: $black;
+      }
+    }
+
     @media (min-width: $breakpoint-desktop) {
       padding-top: 3rem;
     }

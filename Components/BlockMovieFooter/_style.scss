@@ -62,14 +62,15 @@
         row-gap: 10px;
       }
 
-      div {
+      * {
         display: flex;
         flex-flow: row wrap;
         gap: 5px;
-        justify-content: space-between;
-        margin-right: $container-padding-desktop;
+        justify-content: flex-end;
+        // margin-right: $container-padding-desktop;
 
         @media (max-width: $breakpoint-mobile-horizontal) {
+          justify-content: flex-start;
           margin-bottom: $container-padding-desktop;
           max-width: 100px;
         }

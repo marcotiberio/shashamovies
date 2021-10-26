@@ -1,6 +1,6 @@
 {% if items|length > 0 %}
-  <div class="flyntComponent componentSpacing {{ options.theme }}" is="flynt-grid-posts-latest">
-    <div class="container centerMaxWidthContainer">
+  <div class="flyntComponent componentSpacing" is="flynt-grid-posts-latest">
+    <div class="container container--fullWidth">
       {% if preContentHtml %}
         <div class="preContent">
           {{ preContentHtml|e('wp_kses_post') }}
@@ -9,7 +9,7 @@
       <ul class="grid grid--columns{{ options.columns }}">
         {% for item in items %}
           <li class="grid-item">
-            <div class="content boxShadow themeReset">
+            <div class="content">
               <a href="{{ item.link }}" class="content-link" title="{{ item.title }}">
                 <img class="content-image lazyload"
                   src="{{ item.thumbnail.src|resizeDynamic(424, 283) }}"
@@ -30,12 +30,12 @@
                   <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p>
                 </div>
               </a>
-              <footer class="content-footer">
+              {# <footer class="content-footer">
                 <span class="content-readingTime">
                   <i data-feather="clock"></i> {{ item.content | readingtime }} {{ labels.readingTime }}
                 </span>
                 <a href="{{ item.link }}" class="button button--link content-readMore" aria-hidden="true" tabindex="-1">{{ labels.readMore }}</a>
-              </footer>
+              </footer> #}
             </div>
           </li>
         {% endfor %}

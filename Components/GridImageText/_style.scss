@@ -1,4 +1,6 @@
 [is='flynt-grid-image-text'] {
+  margin-top: $container-padding-mobile;
+
   .grid {
     @include reset-list;
     display: flex;
@@ -46,7 +48,8 @@
     height: 100%;
 
     img {
-      background: $color-contrast;
+      height: 250px;
+      object-fit: cover;
     }
 
     &-inner {

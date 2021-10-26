@@ -35,6 +35,14 @@ function getACFLayout()
                 'button_label' => 'Add',
                 'sub_fields' => [
                     [
+                        'label' => __('Link', 'flynt'),
+                        'name' => 'articleLink',
+                        'type' => 'url',
+                        'wrapper' => [
+                            'width' => 33
+                        ],
+                    ],
+                    [
                         'label' => __('Image', 'flynt'),
                         'name' => 'image',
                         'type' => 'image',
@@ -42,18 +50,18 @@ function getACFLayout()
                         'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
                         'mime_types' => 'jpg,jpeg,png',
                         'wrapper' => [
-                            'width' => 40
+                            'width' => 33
                         ],
                     ],
                     [
                         'label' => __('Content', 'flynt'),
                         'name' => 'contentHtml',
                         'type' => 'wysiwyg',
-                        'tabs' => 'visual,text',
+                        'tabs' => 'visual',
                         'media_upload' => 0,
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 60
+                            'width' => 33
                         ],
                     ]
                 ]
@@ -71,7 +79,6 @@ function getACFLayout()
                 'type' => 'group',
                 'layout' => 'row',
                 'sub_fields' => [
-                    FieldVariables\getTheme(),
                     [
                         'label' => __('Columns', 'flynt'),
                         'name' => 'columns',
@@ -81,13 +88,13 @@ function getACFLayout()
                         'max' => 4,
                         'step' => 1
                     ],
-                    [
-                        'label' => __('Show as Card', 'flynt'),
-                        'name' => 'card',
-                        'type' => 'true_false',
-                        'default_value' => 0,
-                        'ui' => 1
-                    ]
+                    // [
+                    //     'label' => __('Show as Card', 'flynt'),
+                    //     'name' => 'card',
+                    //     'type' => 'true_false',
+                    //     'default_value' => 0,
+                    //     'ui' => 1
+                    // ]
                 ]
             ]
         ]
