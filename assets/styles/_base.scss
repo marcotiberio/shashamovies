@@ -34,6 +34,10 @@ html {
   }
 }
 
+*:hover {
+  cursor: default;
+}
+
 body {
   height: 100%;
   overflow-x: hidden;
@@ -620,17 +624,8 @@ select {
 
 .preContent {
   @include reset-content-margins;
-  margin: 0 auto 32px;
-  max-width: $content-max-width;
+  margin: 0;
   text-align: center;
-
-  @media (min-width: $breakpoint-tablet) {
-    margin-bottom: $container-padding-tablet;
-  }
-
-  @media (min-width: $breakpoint-desktop) {
-    margin-bottom: $container-padding-desktop;
-  }
 }
 
 .postContent {
@@ -720,11 +715,38 @@ select {
   }
 }
 
+/* Custom Styling for Landing Page */
+
+.page-landing {
+  .mainHeader {
+    display: none;
+  }
+
+  .mainFooter {
+    display: none;
+  }
+
+  .flyntComponent {
+    &--flynt-block-video-oembed-landing {
+      .container {
+        height: 40vh;
+        margin: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
+
 /* Custom Styling for Homepage */
 
-.home {
+.page-home {
   .mc-container {
     margin-left: 100px;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      margin-left: 0;
+    }
   }
   
   .flyntComponent--flynt-navigation-footer {
@@ -750,6 +772,20 @@ select {
 
     @media (max-width: $breakpoint-mobile-horizontal) {
       margin-left: 0;
+    }
+  }
+
+  .flyntComponent--flynt-block-signup {
+    margin-left: 100px;
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      margin-left: 100px;
+    }
+  }
+
+  footer {
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      margin-left: 100px;
     }
   }
 }

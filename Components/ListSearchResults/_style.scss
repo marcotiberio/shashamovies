@@ -2,4 +2,9 @@
   @import 'Partials/header';
   @import 'Partials/pagination';
   @import 'Partials/results';
+
+  .container--fullWidth {
+    margin-top: $container-padding-mobile;
+    padding: 0;
+  }
 }

@@ -15,6 +15,33 @@
 
 .post {
   @include reset-content-margins;
+  border-bottom: 2px solid $black;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: ($container-padding-mobile / 2) $container-padding-desktop;
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    padding: ($container-padding-mobile / 2) $container-padding-mobile;
+  }
+
+  &:first-child {
+    border-top: 2px solid $black;
+  }
+
+  .title {
+    font-weight: bold;
+  }
+
+  @media (max-width: $breakpoint-mobile-horizontal) {
+    .post-title {
+      width: 50%;
+    }
+
+    .title {
+      width: 100%;
+    }
+  }
 
   &-footer {
     text-align: right;

@@ -17,7 +17,7 @@
       <div class="pageWrapper">
         <header class="mainHeader">
           {% block header %}
-            {% if fn('is_front_page') %}
+            {% if fn('is_page', 6) %}
               {{ renderComponent('NavigationSide') }}
             {% else %} 
               {{ renderComponent('NavigationBurger') }}
@@ -39,7 +39,7 @@
           <div id="mc_embed_signup">
             <form action="https://shashamovies.us7.list-manage.com/subscribe/post?u=e1d1a1990c552b6655b8ad4a7&amp;id=2666c3e50e" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
               <div class="mc-container" id="mc_embed_signup_scroll">
-                <h3>Subscribe to our monthly newsletter</h3>
+                <h3>Subscribe to our newsletter</h3>
                 <div class="indicates-required visuallyHidden"><span class="asterisk">*</span> indicates required</div>
                 <div class="mc-field-group mc-field-group__email">
                   <label class="visuallyHidden" for="mce-EMAIL">Email Address  <span class="asterisk">*</span></label>

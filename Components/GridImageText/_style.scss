@@ -1,12 +1,16 @@
 [is='flynt-grid-image-text'] {
   margin-top: $container-padding-mobile;
 
+  .preContent {
+    padding: 0;
+  }
+
   .grid {
     @include reset-list;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin: ($gutter-width * -1) 0 0 ($gutter-width * -1);
+    margin: $gutter-width 0 0 ($gutter-width * -1);
 
     &--columns2,
     &--columns3,
@@ -54,10 +58,7 @@
 
     &-inner {
       @include reset-content-margins;
-
-      &:not(.boxPadding) {
-        padding: $gutter-width 0;
-      }
+      padding: 0;
     }
   }
 }

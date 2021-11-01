@@ -1,0 +1,55 @@
+[is='flynt-block-video-oembed-landing'] {
+  @import 'Partials/video';
+
+  &.flyntComponent--sizeSmall {
+    .video {
+      max-width: 375px;
+    }
+  }
+
+  &.flyntComponent--sizeMedium {
+    .video {
+      max-width: $content-max-width;
+    }
+  }
+
+  &.flyntComponent--sizeLarge {
+    .video {
+      max-width: 800px;
+    }
+  }
+
+  &.flyntComponent--sizeFull {
+    .figure-caption {
+      margin-left: 0.625rem;
+    }
+  }
+
+  .logo {
+    svg {
+      background-color: $white;
+      height: 100px;
+      left: $container-padding-mobile;
+      position: fixed;
+      top: $container-padding-mobile;
+      width: auto;
+      z-index: 2000;
+    }
+  }
+
+  .button {
+    background-color: $white;
+    border: 1px solid $black;
+    bottom: $container-padding-mobile;
+    color: $black;
+    position: fixed;
+    right: $container-padding-mobile;
+    z-index: 2000;
+
+    &:hover {
+      background-color: $black;
+      border: 1px solid $black;
+      color: $white;
+    }
+  }
+}

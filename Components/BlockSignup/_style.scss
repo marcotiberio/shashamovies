@@ -1,38 +1,69 @@
 [is='flynt-block-signup'] {
+  padding: $container-padding-mobile;
+
+  @media (max-width: $breakpoint-tablet-horizontal) {
+    padding: $container-padding-mobile / 2;
+  }
+
   .container {
     align-items: center;
+    border: 2px solid $black;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     justify-content: center;
+    padding: $container-padding-mobile;
 
     @media (max-width: $breakpoint-tablet-horizontal) {
       align-items: flex-start;
       flex-flow: column wrap;
     }
 
+    .preContent {
+      width: 100%;
+
+      &-image {
+        height: 40vh;
+        object-fit: cover;
+      }
+    }
+
     .content {
-      width: 40%;
+      align-items: center;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      width: 100%;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
         width: 100%;
       }
-    }
 
-    .button {
-      background-color: $black;
-      border: 1px solid $black;
-      color: $white;
-      width: 40%;
+      &-left {
+        width: 50%;
 
-      @media (max-width: $breakpoint-tablet-horizontal) {
-        max-width: 375px;
-        width: auto;
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          width: 100%;
+        }
       }
-
-      &:hover {
-        background-color: transparent;
+  
+      .button {
+        background-color: $black;
         border: 1px solid $black;
-        color: $black;
+        color: $white;
+        margin: 0 auto;
+        width: 40%;
+  
+        @media (max-width: $breakpoint-tablet-horizontal) {
+          margin-left: 0;
+          max-width: 375px;
+          width: auto;
+        }
+  
+        &:hover {
+          background-color: transparent;
+          border: 1px solid $black;
+          color: $black;
+        }
       }
     }
   }

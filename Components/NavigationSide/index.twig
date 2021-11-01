@@ -1,6 +1,10 @@
 <nav is="flynt-navigation-side" class="flyntComponent" aria-label="{{ __("Main", "flynt") }}">
   <div class="container">
     {% include 'Partials/_logo.twig' with { 'logo': logo, 'site': site } only %}
+    <div class="side-description">
+      <p>The independent streaming service for South-West Asian and North African cinema</p>
+      </p>خدمة بث مستقلة تقدم أفلام سينمائية من جنوب غرب آسيا وشمال أفريقيا’<p>
+      </div>
     {% if menu %}
       {% include 'Partials/_hamburger.twig' with { 'a11y': a11y } only %}
     {% endif %}

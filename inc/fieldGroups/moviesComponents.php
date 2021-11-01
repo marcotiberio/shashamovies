@@ -45,7 +45,7 @@ add_action('Flynt/afterRegisterComponents', function () {
             ],
             [
                 'label' => __('Duration', 'flynt'),
-                'name' => 'duration',
+                'name' => 'movieDuration',
                 'type' => 'text',
                 'required' => 0,
                 'wrapper' => [
@@ -53,8 +53,8 @@ add_action('Flynt/afterRegisterComponents', function () {
                 ],
             ],
             [
-                'label' => __('Date', 'flynt'),
-                'name' => 'date',
+                'label' => __('Release Date', 'flynt'),
+                'name' => 'releaseDate',
                 'type' => 'text',
                 'required' => 0,
                 'wrapper' => [
@@ -97,7 +97,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'label' => __('Synopsis - English', 'flynt'),
                 'name' => 'synopsisEnglish',
                 'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
+                'tabs' => 'visual',
                 'media_upload' => 0,
                 'delay' => 1,
                 'required' => 0,
@@ -109,7 +109,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'label' => __('Synopsis - Arabic', 'flynt'),
                 'name' => 'synopsisArabic',
                 'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
+                'tabs' => 'visual',
                 'media_upload' => 0,
                 'delay' => 1,
                 'required' => 0,
@@ -117,6 +117,44 @@ add_action('Flynt/afterRegisterComponents', function () {
                     'width' => '50',
                 ],
             ],
+            [
+                'label' => __('Cast', 'flynt'),
+                'name' => 'castTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Cast Members', 'flynt'),
+                'name' => 'cast',
+                'type' => 'wysiwyg',
+                'tabs' => 'visual',
+                'media_upload' => 0,
+                'delay' => 1,
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ],
+            [
+                'label' => __('Share Links', 'flynt'),
+                'name' => 'shareLinksTab',
+                'type' => 'tab',
+                'placement' => 'top',
+                'endpoint' => 0
+            ],
+            [
+                'label' => __('Share/Links', 'flynt'),
+                'name' => 'shareLinks',
+                'type' => 'wysiwyg',
+                'instructions' => __('To create a shareable link of your page, please visit https://www.websiteplanet.com/webtools/sharelink/ and follow the instructions to paste your page URL.', 'flynt'),
+                'media_upload' => 0,
+                'delay' => 1,
+                'required' => 0,
+                'wrapper' => [
+                    'width' => '100',
+                ],
+            ]
         ],
         'location' => [
             [

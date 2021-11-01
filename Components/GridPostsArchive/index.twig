@@ -6,14 +6,25 @@
       {% set html = isHome ? preContentHtml : description %}
       {{ html|e('wp_kses_post') }}
     </div> #}
-    {% if terms %}
+    {# {% if terms %}
       {% include 'Partials/_filter.twig' %}
-    {% endif %}
+    {% endif %} #}
+    <div class="searchForm">
+      <button class="searchForm-button button" type="submit" aria-label="search">Search</button>
+      <form class="searchForm-input" role="search" action="{{ bloginfo('url') }}">
+        <div class="searchForm-field">
+          <div class="searchForm-box">
+            <label class="visuallyHidden" for="searchForm-input">{{ searchPlaceholder }}</label>
+            <input name="s" id="searchForm-input" class="searchForm-input" type="search" required placeholder="SEARCH FOR..." value="{{ searchQuery }}">
+          </div>
+        </div>
+      </form>
+    </div>
     <ul class="posts">
       {% for post in posts %}
         <li class="post">
           <a class="post-link" href="{{ post.link }}">
-            {% if post.thumbnail %}
+            {# {% if post.thumbnail %}
               <figure class="figure">
                 <img class="figure-image lazyload"
                   src="{{ post.thumbnail.src|resizeDynamic(424, 283) }}"
@@ -30,15 +41,26 @@
                   data-sizes="auto"
                   alt="{{ post.title }}">
               </figure>
-            {% endif %}
-          </a>
+            {% endif %} #}
           <div class="post-inner">
-            <h2 class="h3 post-title">{{ post.title }}</h2>
-            <p class="post-excerpt">{{ post.preview.read_more(false) }}</p>
+            <div class="post-title title">{{ post.title }}</div>
+            <div class="post-title">{{ post.releaseDate }}</div>
+            <div class="post-title">{{ post.director }}</div>
+            <div class="post-title">{{ post.languageMovie }}</div>
+            <div class="post-title">{{ post.movieDuration }}</div>
+            {# {% if post.terms('category')  %}
+                <ul class="tags">
+                  {% for category in post.terms('category')  %}
+                    <li class="tags-item"><a class="tags-itemLink" href="{{ category.link }}">{{ category }}</a></li>
+                  {% endfor %}
+                </ul>
+            {% endif %} #}
+            {# <p class="post-excerpt">{{ post.preview.read_more(false) }}</p> #}
             {# <a class="button button--link" href="{{ post.link }}" title="{{ post.title }}" aria-hidden="true" tabindex="-1">
               {{ labels.readMore }}
             </a> #}
           </div>
+          </a>
         </li>
       {% else %}
         <p class="posts-empty">{{ labels.noPostsFound }}</p>

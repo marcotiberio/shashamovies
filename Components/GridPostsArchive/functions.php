@@ -145,6 +145,50 @@ Options::addTranslatable('GridPostsArchive', [
             ]
         ],
     ],
+    // [
+    //     'label' => __('General', 'flynt'),
+    //     'name' => 'generalTab',
+    //     'type' => 'tab',
+    //     'placement' => 'top',
+    //     'endpoint' => 0
+    // ],
+    // [
+    //     'label' => __('Title', 'flynt'),
+    //     'name' => 'preContentHtml',
+    //     'type' => 'wysiwyg',
+    //     'required' => 1,
+    //     'default_value' => 'Search Result',
+    //     'instructions' => __('Title of the search Page.', 'flynt'),
+    //     'media_upload' => 0,
+    //     'delay' => 1,
+    // ],
+    [
+        'label' => __('Search', 'flynt'),
+        'name' => 'searchTab',
+        'type' => 'tab',
+        'placement' => 'top',
+        'endpoint' => 0
+    ],
+    [
+        'label' => __('Placeholder - Search', 'flynt'),
+        'name' => 'searchPlaceholder',
+        'type' => 'wysiwyg',
+        'required' => 1,
+        'wrapper' => [
+            'width' => '50',
+        ],
+    ],
+    [
+        'label' => __('Button - Search', 'flynt'),
+        'name' => 'search',
+        'type' => 'text',
+        'default_value' => 'Search',
+        'required' => 1,
+        'instructions' => 'The text for the search button.',
+        'wrapper' => [
+            'width' => '50',
+        ],
+    ],
     [
         'label' => __('Options', 'flynt'),
         'name' => 'optionsTab',
@@ -161,4 +205,5 @@ Options::addTranslatable('GridPostsArchive', [
             FieldVariables\getTheme()
         ]
     ],
+    
 ]);

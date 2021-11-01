@@ -28,6 +28,19 @@
       height: 30vh;
     }
 
+    .side-description {
+      font-size: small;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center;
+      width: 80px;
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        bottom: 0%;
+        position: fixed;
+      }
+    }
+
     .admin-bar & {
       top: 46px;
 
@@ -36,6 +49,7 @@
       }
     }
   }
+  
 
   @import 'Partials/logo';
   @import 'Partials/hamburger';

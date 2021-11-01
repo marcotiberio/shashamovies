@@ -25,7 +25,7 @@
                     {{ item.thumbnail.src|resizeDynamic(312, 208) }} 312w"
                   data-sizes="auto"
                   alt="{{ item.thumbnail.alt|e }}">
-                <div class="content-inner boxPadding">
+                <div class="content-inner">
                   <h3 class="content-title">{{ item.title }}</h3>
                   <p class="content-excerpt">{{ item.preview.read_more(false).length(18) }}</p>
                 </div>
@@ -40,9 +40,9 @@
           </li>
         {% endfor %}
       </ul>
-      <div class="allPostsLink">
+      {# <div class="allPostsLink">
         <a href="{{ postTypeArchiveLink }}" class="button button--link">{{ labels.allPosts }}</a>
-      </div>
+      </div> #}
     </div>
   </div>
 {% endif %}

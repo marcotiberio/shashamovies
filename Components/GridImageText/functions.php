@@ -20,11 +20,8 @@ function getACFLayout()
             [
                 'label' => __('Title', 'flynt'),
                 'name' => 'preContentHtml',
-                'type' => 'wysiwyg',
-                'tabs' => 'visual,text',
-                'media_upload' => 0,
+                'type' => 'text',
                 'instructions' => __('Want to add a headline? And a paragraph? Go ahead! Or just leave it empty and nothing will be shown.', 'flynt'),
-                'delay' => 1,
             ],
             [
                 'label' => __('Items', 'flynt'),
@@ -42,13 +39,21 @@ function getACFLayout()
                             'width' => 33
                         ],
                     ],
+                    // [
+                    //     'label' => __('Image', 'flynt'),
+                    //     'name' => 'image',
+                    //     'type' => 'image',
+                    //     'preview_size' => 'medium',
+                    //     'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
+                    //     'mime_types' => 'jpg,jpeg,png',
+                    //     'wrapper' => [
+                    //         'width' => 33
+                    //     ],
+                    // ],
                     [
-                        'label' => __('Image', 'flynt'),
-                        'name' => 'image',
-                        'type' => 'image',
-                        'preview_size' => 'medium',
-                        'instructions' => __('Image-Format: JPG, PNG.', 'flynt'),
-                        'mime_types' => 'jpg,jpeg,png',
+                        'label' => __('Title', 'flynt'),
+                        'name' => 'newsTitle',
+                        'type' => 'text',
                         'wrapper' => [
                             'width' => 33
                         ],

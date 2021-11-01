@@ -33,11 +33,7 @@ function getACFLayout()
             [
                 'label' => __('Title', 'flynt'),
                 'name' => 'title',
-                'type' => 'date_picker',
-                'display_format' => 'd.m.Y',
-                'return_format' => 'd.m.Y',
-                'required' => 0,
-                'step' => 1,
+                'type' => 'text',
             ],
             [
                 'label' => __('Content Selection', 'flynt'),

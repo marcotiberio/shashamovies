@@ -3,7 +3,7 @@
     @include reset-list;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: flex-start;
     margin: ($gutter-width * -1) 0 0 ($gutter-width * -1);
 
     &--columns2,

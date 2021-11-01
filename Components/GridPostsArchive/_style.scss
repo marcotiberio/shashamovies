@@ -1,38 +1,51 @@
 [is='flynt-grid-posts-archive'] {
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
+
   ul {
     @include reset-list;
   }
 
   .posts {
-    column-gap: $container-padding-mobile;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    row-gap: $container-padding-mobile;
-
-    @media (max-width: $breakpoint-tablet-horizontal) {
-      column-gap: 0;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (max-width: $breakpoint-mobile-horizontal) {
-      display: block;
-    }
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: flex-start;
+    row-gap: 0;
 
     .post {
+      border-bottom: 2px solid $black;
       margin: 0;
+      padding: 0 $container-padding-desktop;
+
+      &:first-child {
+        border-top: 2px solid $black;
+      }
+
+      &-inner {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        .title {
+          font-weight: bold;
+        }
+
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          .post-title {
+            width: 50%;
+          }
+
+          .title {
+            width: 100%;
+          }
+        }
+      }
 
       @media (max-width: $breakpoint-tablet-horizontal) {
-        &:nth-child(even) {
-          grid-column-end: 2;
-          grid-column-start: 1;
-          padding-right: $container-padding-mobile / 2;
-        }
-
-        &:nth-child(odd) {
-          grid-column-end: 3;
-          grid-column-start: 2;
-          padding-left: $container-padding-mobile / 2;
-        }
+        padding: 0 $container-padding-mobile;
       }
   
       &-link {
@@ -53,28 +66,52 @@
         margin-bottom: 0.75rem;
       }
   
-      &:first-child {
-        grid-column-end: 5;
-        grid-column-start: 1;
+      // &:first-child {
+      //   grid-column-end: 5;
+      //   grid-column-start: 1;
 
-        .figure-image {
-          height: 500px;
-          object-fit: cover;
+      //   .figure-image {
+      //     height: 500px;
+      //     object-fit: cover;
 
-          @media (max-width: $breakpoint-tablet-horizontal) {
-            height: 350px;
-          }
+      //     @media (max-width: $breakpoint-tablet-horizontal) {
+      //       height: 350px;
+      //     }
 
-          @media (max-width: $breakpoint-mobile-horizontal) {
-            height: 150px;
-          }
-        }
-      }
+      //     @media (max-width: $breakpoint-mobile-horizontal) {
+      //       height: 150px;
+      //     }
+      //   }
+      // }
     }
   }
 
   .posts-empty {
     padding: 40px 0 0;
+  }
+}
+
+.searchForm {
+  display: flex;
+  flex-flow: row-reverse wrap;
+  justify-content: center;
+  margin: $container-padding-mobile 0;
+  // position: fixed;
+  // top: 0;
+  // left: 50%;
+
+  &-button {
+    background-color: $black;
+    border: 1px solid $black;
+    border-radius: 0;
+    color: $white;
+    height: 50px;
+    margin: 0;
+  }
+
+  &-input {
+    height: 50px;
+    margin: 0;
   }
 
   @import 'Partials/filter';
