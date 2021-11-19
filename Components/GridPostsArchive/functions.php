@@ -6,7 +6,7 @@ use Flynt\FieldVariables;
 use Flynt\Utils\Options;
 use Timber\Term;
 
-const POST_TYPE = 'post';
+const POST_TYPE = 'movie';
 const FILTER_BY_TAXONOMY = 'category';
 
 add_filter('Flynt/addComponentData?name=GridPostsArchive', function ($data) {
