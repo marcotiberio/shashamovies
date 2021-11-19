@@ -8,7 +8,7 @@ function getACFLayout()
 {
     return [
         'name' => 'GridImageText',
-        'label' => 'Grid: Image Text',
+        'label' => 'Grid: Press',
         'sub_fields' => [
             [
                 'label' => __('General', 'flynt'),
@@ -36,7 +36,7 @@ function getACFLayout()
                         'name' => 'articleLink',
                         'type' => 'url',
                         'wrapper' => [
-                            'width' => 33
+                            'width' => 50
                         ],
                     ],
                     // [
@@ -51,11 +51,21 @@ function getACFLayout()
                     //     ],
                     // ],
                     [
+                        'label' => __('Date', 'flynt'),
+                        'name' => 'newsDate',
+                        'type' => 'date_picker',
+                        'display_format' => 'd M Y',
+                        'return_format' => 'd M Y',
+                        'wrapper' => [
+                            'width' => 50
+                        ],
+                    ],
+                    [
                         'label' => __('Title', 'flynt'),
                         'name' => 'newsTitle',
                         'type' => 'text',
                         'wrapper' => [
-                            'width' => 33
+                            'width' => 50
                         ],
                     ],
                     [
@@ -66,40 +76,9 @@ function getACFLayout()
                         'media_upload' => 0,
                         'delay' => 1,
                         'wrapper' => [
-                            'width' => 33
+                            'width' => 50
                         ],
                     ]
-                ]
-            ],
-            [
-                'label' => __('Options', 'flynt'),
-                'name' => 'optionsTab',
-                'type' => 'tab',
-                'placement' => 'top',
-                'endpoint' => 0
-            ],
-            [
-                'label' => '',
-                'name' => 'options',
-                'type' => 'group',
-                'layout' => 'row',
-                'sub_fields' => [
-                    [
-                        'label' => __('Columns', 'flynt'),
-                        'name' => 'columns',
-                        'type' => 'number',
-                        'default_value' => 3,
-                        'min' => 1,
-                        'max' => 4,
-                        'step' => 1
-                    ],
-                    // [
-                    //     'label' => __('Show as Card', 'flynt'),
-                    //     'name' => 'card',
-                    //     'type' => 'true_false',
-                    //     'default_value' => 0,
-                    //     'ui' => 1
-                    // ]
                 ]
             ]
         ]

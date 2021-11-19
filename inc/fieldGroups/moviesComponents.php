@@ -144,15 +144,30 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'endpoint' => 0
             ],
             [
-                'label' => __('Share/Links', 'flynt'),
-                'name' => 'shareLinks',
-                'type' => 'wysiwyg',
+                'label' => __('Link Facebook', 'flynt'),
+                'name' => 'shareLinkFacebook',
+                'type' => 'text',
                 'instructions' => __('To create a shareable link of your page, please visit https://www.websiteplanet.com/webtools/sharelink/ and follow the instructions to paste your page URL.', 'flynt'),
-                'media_upload' => 0,
-                'delay' => 1,
-                'required' => 0,
                 'wrapper' => [
-                    'width' => '100',
+                    'width' => '33',
+                ],
+            ],
+            [
+                'label' => __('Link Instagram', 'flynt'),
+                'name' => 'shareLinkInstagram',
+                'type' => 'text',
+                'instructions' => __('To create a shareable link of your page, please visit https://www.websiteplanet.com/webtools/sharelink/ and follow the instructions to paste your page URL.', 'flynt'),
+                'wrapper' => [
+                    'width' => '33',
+                ],
+            ],
+            [
+                'label' => __('Link Twitter', 'flynt'),
+                'name' => 'shareLinkTwitter',
+                'type' => 'text',
+                'instructions' => __('To create a shareable link of your page, please visit https://www.websiteplanet.com/webtools/sharelink/ and follow the instructions to paste your page URL.', 'flynt'),
+                'wrapper' => [
+                    'width' => '33',
                 ],
             ]
         ],
@@ -168,34 +183,34 @@ add_action('Flynt/afterRegisterComponents', function () {
         'menu_order' => 0,
         'position' => 'acf_after_title',
     ]);
-    ACFComposer::registerFieldGroup([
-        'name' => 'movieComponents',
-        'title' => 'Movie Components',
-        'style' => 'seamless',
-        'fields' => [
-            [
-                'name' => 'movieComponents',
-                'label' => __('Movie Components', 'flynt'),
-                'type' => 'flexible_content',
-                'button_label' => __('Add Component', 'flynt'),
-                'layouts' => [
-                    Components\BlockCollapse\getACFLayout(),
-                    Components\BlockImage\getACFLayout(),
-                    Components\BlockImageText\getACFLayout(),
-                    Components\BlockVideoOembed\getACFLayout(),
-                    Components\BlockWysiwyg\getACFLayout(),
-                    Components\SliderImages\getACFLayout(),
-                ],
-            ],
-        ],
-        'location' => [
-            [
-                [
-                    'param' => 'post_type',
-                    'operator' => '==',
-                    'value' => 'movies',
-                ],
-            ],
-        ],
-    ]);
+    // ACFComposer::registerFieldGroup([
+    //     'name' => 'movieComponents',
+    //     'title' => 'Movie Components',
+    //     'style' => 'seamless',
+    //     'fields' => [
+    //         [
+    //             'name' => 'movieComponents',
+    //             'label' => __('Movie Components', 'flynt'),
+    //             'type' => 'flexible_content',
+    //             'button_label' => __('Add Component', 'flynt'),
+    //             'layouts' => [
+    //                 Components\BlockCollapse\getACFLayout(),
+    //                 Components\BlockImage\getACFLayout(),
+    //                 Components\BlockImageText\getACFLayout(),
+    //                 Components\BlockVideoOembed\getACFLayout(),
+    //                 Components\BlockWysiwyg\getACFLayout(),
+    //                 Components\SliderImages\getACFLayout(),
+    //             ],
+    //         ],
+    //     ],
+    //     'location' => [
+    //         [
+    //             [
+    //                 'param' => 'post_type',
+    //                 'operator' => '==',
+    //                 'value' => 'movies',
+    //             ],
+    //         ],
+    //     ],
+    // ]);
 });

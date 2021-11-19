@@ -29,10 +29,11 @@
     }
 
     .side-description {
-      font-size: small;
+      font-size: x-small;
       font-weight: bold;
       line-height: 1;
       text-align: center;
+      transform: translateY(150%);
       width: 80px;
 
       @media (max-width: $breakpoint-mobile-horizontal) {

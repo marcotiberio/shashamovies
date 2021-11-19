@@ -15,6 +15,7 @@ add_action('Flynt/afterRegisterComponents', function () {
                 'type' => 'flexible_content',
                 'button_label' => __('Add Component', 'flynt'),
                 'layouts' => [
+                    Components\BlockAbout\getACFLayout(),
                     Components\BlockCollapse\getACFLayout(),
                     Components\BlockContentHome\getACFLayout(),
                     Components\HeroImageCta\getACFLayout(),

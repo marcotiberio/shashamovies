@@ -92,6 +92,18 @@
         }
       }
     }
+
+    .shareLinks {
+      &-content {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+
+        a {
+          margin-right: 20px;
+        }
+      }
+    }
   }
 
 }

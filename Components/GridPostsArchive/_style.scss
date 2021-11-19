@@ -107,13 +107,19 @@
     color: $white;
     height: 50px;
     margin: 0;
+
+    &:hover {
+      background-color: $pink;
+      border: 1px solid $black;
+      color: $black;
+    }
   }
 
   &-input {
     height: 50px;
     margin: 0;
   }
-
-  @import 'Partials/filter';
-  @import 'Partials/paginationButtons';
 }
+
+@import 'Partials/filter';
+@import 'Partials/paginationButtons';

@@ -1,0 +1,16 @@
+[is='flynt-block-about'] {
+  .container {
+    column-gap: $container-padding-desktop;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @media (max-width: $breakpoint-mobile-horizontal) {
+      display: block;
+    }
+  }
+  
+  .content {
+    @include reset-content-margins;
+    text-align: left;
+  }
+}

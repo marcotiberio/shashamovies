@@ -31,6 +31,22 @@
     width: 100%;
     z-index: 99;
 
+    .side-description {
+      font-size: small;
+      font-weight: bold;
+      line-height: 1;
+      text-align: center;
+      
+      p {
+        margin-bottom: 0;
+      }
+
+      @media (max-width: $breakpoint-mobile-horizontal) {
+        font-size: x-small;
+        width: 60%;
+      }
+    }
+
     .admin-bar & {
       top: 46px;
 

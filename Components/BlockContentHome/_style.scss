@@ -22,7 +22,7 @@
       @include reset-list;
       display: flex;
       flex-flow: column wrap;
-      max-height: 800px;
+      max-height: 900px;
       overflow: hidden;
 
       @media (max-width: $breakpoint-tablet-horizontal) {

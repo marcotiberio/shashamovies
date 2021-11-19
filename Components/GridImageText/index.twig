@@ -27,9 +27,14 @@
                     data-sizes="auto"
                     alt="{{ item.image.alt|e }}">
                 {% endif %} #}
+                {% if item.newsDate %}
+                  <div class="content-inner">
+                    <h3 class="date">{{ item.newsDate }}</h3>
+                  </div>
+                {% endif %}
                 {% if item.newsTitle %}
                   <div class="content-inner">
-                    <h3>{{ item.newsTitle }}</h3>
+                    <h1>{{ item.newsTitle }}</h1>
                   </div>
                 {% endif %}
                 {% if item.contentHtml %}
