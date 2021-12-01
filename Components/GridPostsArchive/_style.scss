@@ -25,21 +25,47 @@
       }
 
       &-inner {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
+        align-items: center;
+        display: grid;
+        grid-template-columns: 4fr 1fr 2fr 1fr 1fr;
 
-        .title {
-          font-weight: bold;
+        .post-title {
+          text-align: center;
+          
+          &:first-child {
+            text-align: left;
+          }
+
+          &:last-child {
+            text-align: right;
+          }
+
+          &.title {
+            font-weight: bold;
+          }
         }
 
         @media (max-width: $breakpoint-mobile-horizontal) {
-          .post-title {
-            width: 50%;
-          }
+          align-items: center;
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-between;
 
-          .title {
-            width: 100%;
+          .post-title {
+            text-align: left;
+            width: 50%;
+            
+            &:first-child {
+              text-align: left;
+            }
+  
+            &:last-child {
+              text-align: left;
+            }
+  
+            &.title {
+              width: 100%;
+            }
           }
         }
       }

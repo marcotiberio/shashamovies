@@ -22,7 +22,7 @@
       @include reset-list;
       display: flex;
       flex-flow: column wrap;
-      max-height: 900px;
+      max-height: 1600px;
       overflow: hidden;
 
       @media (max-width: $breakpoint-tablet-horizontal) {
@@ -159,7 +159,7 @@
     width: 100%;
   }
 
-  @for $i from 1 through 5 { 
+  @for $i from 1 through 10 { 
     .grid-item:nth-child(#{$i}) .figure-image {
       $h: (random(400) + 100) + px;
       height: $h;

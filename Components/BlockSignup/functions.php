@@ -40,15 +40,15 @@ function getACFLayout()
                     'width' => 100
                 ],
             ],
-            // [
-            //     'label' => __('Button', 'flynt'),
-            //     'name' => 'button',
-            //     'type' => 'url',
-            //     'return_format' => 'link',
-            //     'wrapper' => [
-            //         'width' => 50
-            //     ],
-            // ]
+            [
+                'label' => __('Button', 'flynt'),
+                'name' => 'button',
+                'type' => 'url',
+                'return_format' => 'link',
+                'wrapper' => [
+                    'width' => 50
+                ],
+            ]
         ]
     ];
 }

@@ -3,9 +3,11 @@
     column-gap: $container-padding-desktop;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    row-gap: $container-padding-desktop;
 
     @media (max-width: $breakpoint-mobile-horizontal) {
-      display: block;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr);
     }
   }
   

@@ -89,6 +89,10 @@
         justify-content: space-between;
         width: 100%;
 
+        @media (max-width: $breakpoint-mobile-horizontal) {
+          display: none;
+        }
+
         .synopsis {
           background-color: $white;
           border-bottom: 2px solid $black;
