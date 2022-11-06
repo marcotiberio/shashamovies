@@ -205,5 +205,4 @@ Options::addTranslatable('GridPostsArchive', [
             FieldVariables\getTheme()
         ]
     ],
-    
 ]);
